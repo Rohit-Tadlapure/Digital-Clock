@@ -1,5 +1,5 @@
 # Digital-Clock
-This is simple project to show time and date in full format.
+This is simple project to show time and date in full format as well as epoch time in milliseconds.
 Below is attached screenshot of the project view.
 
 
