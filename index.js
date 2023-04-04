@@ -1,9 +1,8 @@
 
-
 setInterval(()=>{
     const time = document.querySelector("#ISOtime");
     const dateAndUTC = document.querySelector('#dateAndUTC');
-    const epochInMilliSec = document.querySelector('#epochInMilliSec')
+    const epochInMilliSec = document.querySelector('#epochInMilliSec');
     let date = new Date();
     let hours = date.getHours();
     let minutes = date.getMinutes();
@@ -29,13 +28,12 @@ setInterval(()=>{
         seconds = "0" + seconds;
     }
 
-    ISOtime.textContent = hours + ":" + minutes + ":" + seconds + " " + AM_PM;
-    dateAndUTC.textContent = date.toString().slice(0,33);
-
     let secSinceEpoch = function secSinceEpoch(){
-        return Math.floor(Date.now()/1000) || 0
+        return Math.floor(Date.now()/1000) || 0 ;
     }
 
+    ISOtime.textContent = hours + ":" + minutes + ":" + seconds + " " + AM_PM;
+    dateAndUTC.textContent = date.toString().slice(0,15) + " "+ date.toString().slice(25,33);
     epochInMilliSec.textContent = "Current Epoch Time in MilliSec : " + secSinceEpoch();
 });
 
